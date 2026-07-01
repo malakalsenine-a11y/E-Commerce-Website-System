@@ -13,7 +13,7 @@ namespace project01.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int userId { get; set; }  //generated (Primary Key)
+        public int userId { get; set; }  // system generated (Primary Key)
 
         [Required]
         [MaxLength (50)]
@@ -44,11 +44,11 @@ namespace project01.Models
 
 
         [Required]
-        public DateTime registrationDate { get; set; } // user input
+        public DateTime registrationDate { get; set; } // system generated
 
 
 
-        public bool isActive { get; set; } = true ; // Default
+        public bool isActive { get; set; } = true ; // Default value
 
 
 
