@@ -35,7 +35,14 @@ namespace project01.Models
 
 
         [Required]
-        public DateTime reviewDate { get; set; } // user input
+        public DateTime reviewDate { get; set; } // system generated
+
+
+
+        // ===========================================================
+
+        public User User { get; set; } //navigation
+        public Product product { get; set; } //navigation
 
     }
 }
