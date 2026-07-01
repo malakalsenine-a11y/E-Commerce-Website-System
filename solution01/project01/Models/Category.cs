@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace project01.Models
 {
-    internal class Category
+    public class Category
     {
     }
 }
