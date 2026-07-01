@@ -31,7 +31,7 @@ namespace project01.Models
 
 
 
-        [Required]
+        [Required] 
         [MaxLength (30)]
         public string status { get; set; } = "Pending";  // default value
 
