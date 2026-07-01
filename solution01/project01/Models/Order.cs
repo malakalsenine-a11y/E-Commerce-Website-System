@@ -17,7 +17,7 @@ namespace project01.Models
 
 
         [Required]
-        [ForeignKey("User")]
+        [ForeignKey("user")]
         public int userId { get; set; } // user input (Foreign Key)
 
 
@@ -47,6 +47,11 @@ namespace project01.Models
 
         // ========================================================
 
-        public User user { get; set; } //navigation
+        public User user { get; set; } //navigation 
+
+        public IList<Product> products { get; set; } // Relationship
+
+
+
     }
 }

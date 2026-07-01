@@ -41,7 +41,7 @@ namespace project01.Models
 
 
         [Required]
-        [ForeignKey("Category")]
+        [ForeignKey("category")]
         public int  categoryId { get; set; } // user input (Foreign Key)
 
 
@@ -53,5 +53,12 @@ namespace project01.Models
 
         // ==================================================================
         public Category category { get; set; }  //navigation
+
+        public IList<Order> orders { get; set; } // Relationship
+
+        public IList<Review> reviews { get; set; } // Relationship
+
+
+
     }
 }

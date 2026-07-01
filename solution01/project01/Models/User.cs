@@ -50,6 +50,13 @@ namespace project01.Models
 
         public bool isActive { get; set; } = true ; // Default value
 
+        // ===========================================================
+        public IList<Order> orders { get; set; } // Relationship
+
+        public IList<Review> reviews { get; set; } // Relationship
+
+
+
 
 
     }

@@ -27,5 +27,10 @@ namespace project01.Models
 
         [MaxLength(300)]
         public string? imageUrl { get; set; } // user input  (Optional)
+
+
+        //==============================================================
+        public IList<Product> products { get; set; } // Relationship
+
     }
 }
