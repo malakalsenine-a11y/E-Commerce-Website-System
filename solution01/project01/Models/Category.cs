@@ -17,15 +17,15 @@ namespace project01.Models
 
         [Required]
         [MaxLength(100)]
-        public string categoryName { get; set; } // user input
+        public string categoryName { get; set; } // user input (unique)
 
 
         [MaxLength(500)]
-        public string? description { get; set; } // user input
+        public string? description { get; set; } // user input (Optional)
 
 
 
         [MaxLength(300)]
-        public string? imageUrl { get; set; } // user input
+        public string? imageUrl { get; set; } // user input  (Optional)
     }
 }
