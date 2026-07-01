@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace project01.Models
     public class Product
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int productId { get; set; }  //generated (Primary Key)
 
 
@@ -38,6 +40,7 @@ namespace project01.Models
 
 
         [Required]
+        [ForeignKey("Category")]
         public int  categoryId { get; set; } // user input (Foreign Key)
 
 
