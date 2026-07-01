@@ -26,13 +26,14 @@ namespace project01.Models
 
 
         [Required]
-        [Range(0.01, double.MaxValue)]
+        [Range(typeof(decimal), "0.01", "79228162514264337593543950335")]
         public decimal price { get; set; } // user input
 
 
         [Required]
-        [Range(0.01, double.MaxValue)]
-        public int stockQuantity { get; set; } // user input
+        [Range(0, int.MaxValue)]
+        public int stockQuantity { get; set; } = 0; // user input
+
 
 
         [MaxLength(300)]
@@ -45,9 +46,12 @@ namespace project01.Models
 
 
         [Required]
-        public DateTime createdAt { get; set; } // user input (Foreign Key)
+        public DateTime createdAt { get; set; } // system generated
 
         public bool isAvailable { get; set; } = true; // Default
 
+
+        // ==================================================================
+        public Category category { get; set; }  //navigation
     }
 }
