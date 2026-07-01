@@ -10,7 +10,9 @@ namespace project01.Models
     {
 
         public int productId { get; set; }  //generated 
+
         public string productName { get; set; } // user input
+
         public string description { get; set; } // user input
 
         public decimal price { get; set; } // user input

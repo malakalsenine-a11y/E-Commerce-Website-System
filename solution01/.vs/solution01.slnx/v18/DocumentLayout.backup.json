@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "project01\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Order.cs",
+              "RelativeToolTip": "project01\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T08:32:32.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Product.cs",
               "RelativeDocumentMoniker": "project01\\Models\\Product.cs",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Category.cs",
               "RelativeDocumentMoniker": "project01\\Models\\Category.cs",
@@ -51,12 +68,11 @@
               "RelativeToolTip": "project01\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:21:47.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:21:47.606Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\User.cs",
               "RelativeDocumentMoniker": "project01\\Models\\User.cs",
@@ -64,12 +80,11 @@
               "RelativeToolTip": "project01\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:21:22.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:21:22.087Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Program.cs",
               "RelativeDocumentMoniker": "project01\\Program.cs",
