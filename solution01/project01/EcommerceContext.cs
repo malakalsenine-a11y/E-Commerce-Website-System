@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace project01
 {
-    public class EcommerceContext
+    public class EcommerceContext : DbContext
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Contain> Contains { get; set; }
@@ -18,7 +18,10 @@ namespace project01
         public DbSet<User> users { get; set; }
 
 
-
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer("Server=localhost;Database=EcommerceDB;Trusted_connection=True;TrustServerCertificate=True");
+        }
 
     }
 }

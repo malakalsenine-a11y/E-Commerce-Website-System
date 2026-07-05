@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "project01\\EcommerceContext.cs",
               "ToolTip": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\EcommerceContext.cs",
               "RelativeToolTip": "project01\\EcommerceContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-05T05:36:54.773Z",
               "EditorCaption": ""
@@ -67,8 +67,7 @@
               "RelativeToolTip": "project01\\Models\\Review.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:35:24.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:35:24.697Z"
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "project01\\Models\\Contain.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T11:17:11.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T11:17:11.257Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "project01\\Models\\Product.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAA5wDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:30:12.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:30:12.289Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "project01\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:21:47.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:21:47.606Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "project01\\Models\\User.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAA5wDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:21:22.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:21:22.087Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "project01\\Models\\Order.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:32:32.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:32:32.582Z"
             },
             {
               "$type": "Document",
@@ -145,8 +139,7 @@
               "RelativeToolTip": "project01\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:14:41.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:14:41.227Z"
             }
           ]
         }
