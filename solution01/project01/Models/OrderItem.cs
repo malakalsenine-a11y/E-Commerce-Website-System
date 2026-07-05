@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace project01.Models
 {
-    public class Contain
+    public class OrderItem
     {
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int quantityId { get; set; }    // system generated
@@ -40,3 +41,4 @@ namespace project01.Models
 
     }
 }
+

@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +23,8 @@
       "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\models\\contain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\models\\contain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|solutionrelative:project01\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9D6A0C5-5CFE-1966-563C-1AF6FDF81136}|project01\\project01.csproj|c:\\users\\malak\\onedrive\\desktop\\e-commerce website system\\solution01\\project01\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,37 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Contain.cs",
-              "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Contain.cs",
-              "RelativeDocumentMoniker": "project01\\Models\\Contain.cs",
-              "ToolTip": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Contain.cs",
-              "RelativeToolTip": "project01\\Models\\Contain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T11:17:11.257Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "project01\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Category.cs",
-              "RelativeToolTip": "project01\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABIAAAAAAAAAA==",
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "project01\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\OrderItem.cs",
+              "RelativeToolTip": "project01\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:21:47.606Z",
+              "WhenOpened": "2026-07-05T06:25:33.772Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Program.cs",
               "RelativeDocumentMoniker": "project01\\Program.cs",
@@ -80,25 +67,24 @@
               "RelativeToolTip": "project01\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:14:41.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:14:41.227Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "EcommerceContext.cs",
               "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\EcommerceContext.cs",
               "RelativeDocumentMoniker": "project01\\EcommerceContext.cs",
               "ToolTip": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\EcommerceContext.cs",
               "RelativeToolTip": "project01\\EcommerceContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-05T05:36:54.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Order.cs",
               "RelativeDocumentMoniker": "project01\\Models\\Order.cs",
@@ -111,16 +97,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Product.cs",
               "RelativeDocumentMoniker": "project01\\Models\\Product.cs",
               "ToolTip": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Product.cs",
               "RelativeToolTip": "project01\\Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwEIAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-01T08:30:12.289Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "project01\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\malak\\OneDrive\\Desktop\\E-Commerce Website System\\solution01\\project01\\Models\\Category.cs",
+              "RelativeToolTip": "project01\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T08:21:47.606Z"
             },
             {
               "$type": "Document",

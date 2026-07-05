@@ -12,7 +12,7 @@ namespace project01.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int productId { get; set; }  //generated (Primary Key)
+        public int productId { get; set; }  // System generated (Primary Key)
 
 
         [Required]
@@ -26,13 +26,14 @@ namespace project01.Models
 
 
         [Required]
-        [Range(typeof(decimal), "0.01", "79228162514264337593543950335")]
+        [Column(TypeName = "decimal(10,2)")]
+        [Range(0.01, double.MaxValue)]
         public decimal price { get; set; } // user input
 
 
         [Required]
         [Range(0, int.MaxValue)]
-        public int stockQuantity { get; set; } = 0; // user input
+        public int stockQuantity { get; set; } = 0; // default value
 
 
 
@@ -40,24 +41,31 @@ namespace project01.Models
         public string? imageUrl { get; set; } // user input
 
 
-        [Required]
-        [ForeignKey("category")]
-        public int  categoryId { get; set; } // user input (Foreign Key)
-
 
         [Required]
         public DateTime createdAt { get; set; } // system generated
 
-        public bool isAvailable { get; set; } = true; // Default
+        public bool isAvailable { get; set; } = true; // Default value
 
 
         // ==================================================================
-        public Category category { get; set; }  //navigation
 
-        public IList<Order> orders { get; set; } // Relationship
 
-        public IList<Review> reviews { get; set; } // Relationship
+        // foreign key — every product must belong to a category
 
+        [Required]
+        [ForeignKey("category")]
+        public int categoryId { get; set; } // from list  (Foreign Key)
+        public Category category { get; set; }  //navigation property
+
+
+        // reverse navigation — one Product has many Reviews
+
+        public List<Review> reviews { get; set; } // Relationship
+
+
+        // reverse navigation — one Product appears in many OrderItems (bridge table)
+        public List<Order> orders { get; set; } // Relationship
 
 
     }
