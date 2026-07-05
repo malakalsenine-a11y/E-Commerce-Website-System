@@ -12,17 +12,7 @@ namespace project01.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int reviewId { get; set; }  //generated (Primary Key)
-
-
-        [Required]
-        [ForeignKey ("user")]
-        public int userId { get; set; } // user input (Foreign Key)
-
-
-        [Required]
-        [ForeignKey("product")]
-        public int productId { get; set; } // user input (Foreign Key)
+        public int reviewId { get; set; }  // System generated (Primary Key)
 
 
         [Required]
@@ -41,7 +31,19 @@ namespace project01.Models
 
         // ===========================================================
 
+        // foreign key — every review is written by exactly one user
+
+        [Required]
+        [ForeignKey("user")]
+        public int userId { get; set; } // from list (Foreign Key)
         public User user { get; set; } //navigation
+
+
+        // foreign key — every review is about exactly one product
+
+        [Required]
+        [ForeignKey("product")]
+        public int productId { get; set; } // from list (Foreign Key)
         public Product product { get; set; } //navigation
 
     }
