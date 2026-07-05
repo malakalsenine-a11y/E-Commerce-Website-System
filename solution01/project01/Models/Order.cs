@@ -17,17 +17,13 @@ namespace project01.Models
 
 
         [Required]
-        [ForeignKey("user")]
-        public int userId { get; set; } // user input (Foreign Key)
-
-
-        [Required]
         public DateTime orderDate { get; set; } // // system generated
 
 
         [Required]
-        [Range(typeof(decimal), "0", "79228162514264337593543950335")]
-        public decimal totalAmount { get; set; } // user input
+        [Column(TypeName = "decimal(10,2)")]
+        [Range(0, double.MaxValue)]
+        public decimal totalAmount { get; set; } // calculated
 
 
 
@@ -43,15 +39,25 @@ namespace project01.Models
 
         [Required]
         [MaxLength(50)]
-        public string paymentMethod { get; set; } // user input
+        public string paymentMethod { get; set; } // // from list — "CreditCard" | "DebitCard" | "PayPal" | "Cash"
 
         // ========================================================
+
+
+        // foreign key — every order must belong to exactly one user
+
+        [Required]
+        [ForeignKey("user")]
+        public int userId { get; set; }   // from list (Foreign Key)
 
         public User user { get; set; } //navigation 
 
         public IList<Product> products { get; set; } // Relationship
 
 
+        // reverse navigation — one Order has many OrderItems (bridge table)
+
+        public List<Contain> contains { get; set; } = new List<Contain>();
 
     }
 }
