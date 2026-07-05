@@ -57,7 +57,7 @@ namespace project01.Models
 
         // reverse navigation — one Order has many OrderItems (bridge table)
 
-        public List<Contain> contains { get; set; } = new List<Contain>();
+        public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
     }
 }

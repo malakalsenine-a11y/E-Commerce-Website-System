@@ -3,7 +3,7 @@
     public class Program
     {
 
-        public static EcommerceContext context = new EcommerceContext();
+        //public static EcommerceContext context = new EcommerceContext();
 
 
 
