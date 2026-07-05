@@ -61,11 +61,11 @@ namespace project01.Models
 
         // reverse navigation — one Product has many Reviews
 
-        public List<Review> reviews { get; set; } // Relationship
+        public List<Review> reviews { get; set; } = new List<Review>();     // Relationship
 
 
         // reverse navigation — one Product appears in many OrderItems (bridge table)
-        public List<Order> orders { get; set; } // Relationship
+        public List<OrderItem> orderItems { get; set; } = new List<OrderItem>();    // Relationship
 
 
     }
