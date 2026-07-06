@@ -101,8 +101,52 @@ namespace project01
             Console.WriteLine("Product added successfully.");
         }
 
+        // ==================================================================
+        //                  *** 03 Place an Order ***
+        // ==================================================================
+
+        public static void PlaceAnOrder()
+        {
+            Console.WriteLine("Enter User ID: ");
+            int userid = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter Shipping Address: ");
+            string shippingAddress = Console.ReadLine();
+
+            Console.WriteLine("Payment Method:");
+            Console.WriteLine("1. CreditCard");
+            Console.WriteLine("2. DebitCard");
+            Console.WriteLine("3. PayPal");
+            Console.WriteLine("4. Cash");
+
+            Console.WriteLine("Enter Payment Method:");
+            string paymentMethod = Console.ReadLine();
+
+            Order order = new Order
+            {
+                orderId = userid,
+                orderDate = DateTime.Now,
+                totalAmount = 0,
+                status = "Pending",
+                shippingAddress = shippingAddress,
+                paymentMethod = paymentMethod
+            };
+
+            context.Orders.Add(order);
+            context.SaveChanges();
 
 
+            //---------------------------------------------------
+
+            Console.WriteLine("How many products? ");
+            int productNum = int.Parse(Console.ReadLine());
+
+            for(int i = 1; i<= productNum; i++)
+            {
+
+            }
+
+        }
 
 
 
