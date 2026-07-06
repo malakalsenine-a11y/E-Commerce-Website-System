@@ -7,6 +7,9 @@ namespace project01
 
         public static EcommerceContext context = new EcommerceContext();
 
+        // ==================================================================
+        //                       *** 01 Register a New User ***
+        // ==================================================================
 
         public static void RegisterNewUser()
         {
@@ -45,6 +48,69 @@ namespace project01
 
             Console.WriteLine($"New user ID: {user.userId}");
         }
+
+        // ==================================================================
+        //                  *** 02 Add a New Product to a Category ***
+        // ==================================================================
+
+        public static void AddNewProductToCategory()
+        {
+
+            var categories = context.Categories.ToList();
+
+            foreach(var category in categories)
+            {
+                Console.WriteLine($"{category.categoryId}  -  {category.categoryName}");
+            }
+
+
+            Console.WriteLine("Enter Id of Category: ");
+            int categoryID = int.Parse(Console.ReadLine());
+
+
+
+            Console.Write(" Enter productName: ");
+            string nameProduct = Console.ReadLine();
+
+            Console.Write(" Enter description: ");
+            string description = Console.ReadLine();
+
+            Console.Write(" Enter price: ");
+            decimal price = decimal.Parse(Console.ReadLine());
+
+            Console.Write("Enter imageUrl: ");
+            string imageUrl = Console.ReadLine();
+
+            Console.Write("Enter stockQuantity: ");
+            int stockQuantity = int.Parse(Console.ReadLine());
+
+            Product product = new Product
+            {
+                categoryId = categoryID,
+                productName = nameProduct,
+                description = description,
+                price = price,
+                imageUrl = imageUrl,
+                stockQuantity = stockQuantity,
+                createdAt = DateTime.Now,
+                isAvailable = true
+            };
+
+            context.Products.Add(product);
+            context.SaveChanges();
+            Console.WriteLine("Product added successfully.");
+        }
+
+
+
+
+
+
+
+
+
+
+
         static void Main(string[] args) 
         {
             Console.WriteLine("Hello, World!");
