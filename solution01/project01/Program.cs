@@ -416,6 +416,30 @@ namespace project01
 
         }
 
+
+        // ==================================================================
+        //                  *** 07 Delete a Review ***
+        // ==================================================================
+
+        public static void DeleteReview()
+        {
+            Console.WriteLine("Enter Review ID: ");
+            int idReview = int.Parse(Console.ReadLine());
+
+            Review review = context.Reviews
+                .FirstOrDefault(r => r.reviewId == idReview);
+
+            if(review == null)
+            {
+                Console.WriteLine("Review not found.");
+                return;
+            }
+
+            context.Reviews.Remove(review);
+            context.SaveChanges();
+            Console.WriteLine("Review deleted successfully.");
+        }
+        
         static void Main(string[] args) 
         {
             Console.WriteLine("Hello, World!");
