@@ -318,7 +318,49 @@ namespace project01
         }
 
 
+        // ==================================================================
+        //                  *** 04 Write a Product Review ***
+        // ==================================================================
 
+        public static void UpdateProduct()
+        {
+            Console.WriteLine("Enter product ID: ");
+            int idProduct = int.Parse(Console.ReadLine());
+
+
+            Product product = context.Products
+                .FirstOrDefault(p => p.productId == idProduct);
+
+
+            if (product == null)
+            {
+                Console.WriteLine("product not found.");
+                return;
+            }
+
+            Console.WriteLine("Enter new price: ");
+            decimal newPrice = decimal.Parse(Console.ReadLine());
+
+            if (newPrice < 0)
+            {
+                Console.WriteLine("Price cannot be negative.");
+                return;
+            }
+
+
+            product.price = newPrice;
+
+            Console.WriteLine("Is product available? (true/false): ");
+            bool isAvailable = bool.Parse(Console.ReadLine());
+
+
+            product.isAvailable = isAvailable;
+
+
+            context.SaveChanges();
+            Console.WriteLine("Product updated successfully.");
+
+        }
 
 
         static void Main(string[] args) 
