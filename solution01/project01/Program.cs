@@ -11,7 +11,7 @@ namespace project01
         //                       *** 01 Register a New User ***
         // ==================================================================
 
-        public static void RegisterNewUser()
+        public static void AddRegisterNewUser()
         {
             Console.Write("Username: ");
             string username = Console.ReadLine();
@@ -105,10 +105,20 @@ namespace project01
         //                  *** 03 Place an Order ***
         // ==================================================================
 
-        public static void PlaceAnOrder()
+        public static void AddPlaceOrder()
         {
             Console.WriteLine("Enter User ID: ");
             int userid = int.Parse(Console.ReadLine());
+
+            User user = context.users
+                .FirstOrDefault(u => u.userId == userid);
+
+
+            if(user == null)
+            {
+                Console.WriteLine("User not found.");
+                return;
+            }
 
             Console.Write("Enter Shipping Address: ");
             string shippingAddress = Console.ReadLine();
@@ -119,12 +129,47 @@ namespace project01
             Console.WriteLine("3. PayPal");
             Console.WriteLine("4. Cash");
 
-            Console.WriteLine("Enter Payment Method:");
-            string paymentMethod = Console.ReadLine();
+            Console.Write("Choose Payment Method: ");
+            int choice = int.Parse(Console.ReadLine());
+
+            string paymentMethod;
+
+            switch (choice)
+            {
+                case 1:
+                    paymentMethod = "CreditCard";
+                    break;
+                case 2:
+                    paymentMethod = "DebitCard";
+                    break;
+                case 3:
+                    paymentMethod = "PayPal";
+                    break;
+                case 4:
+                    paymentMethod = "Cash";
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice.");
+                    return;
+            }
+
+            //Console.WriteLine("Enter Payment Method:");
+            //string paymentMethod = Console.ReadLine();
+
+            //if (    paymentMethod != "CreditCard" &&
+            //        paymentMethod != "DebitCard" &&
+            //        paymentMethod != "PayPal" &&
+            //        paymentMethod != "Cash")
+            //    {
+            //        Console.WriteLine("Invalid payment method.");
+            //        return;
+            //    }
+
+
 
             Order order = new Order
             {
-                orderId = userid,
+                userId = userid,
                 orderDate = DateTime.Now,
                 totalAmount = 0,
                 status = "Pending",
@@ -143,8 +188,51 @@ namespace project01
 
             for(int i = 1; i<= productNum; i++)
             {
+                Console.WriteLine("Enter product ID:");
+                int productId = int.Parse(Console.ReadLine());
+
+                Console.Write("Enter Quantity: ");
+                int quantity = int.Parse(Console.ReadLine());
+
+      
+
+                Product product = context.Products
+                    .FirstOrDefault(P => P.productId == productId);
+
+                if(product == null)
+                {
+                    Console.WriteLine("Product not found!");
+                    return;
+                }
+
+                if (quantity > product.stockQuantity)
+                {
+                    Console.WriteLine("Not enough stock.");
+                    return;
+                }
+
+                OrderItem orderItem = new OrderItem
+                {
+                    orderId = order.orderId,
+                    productId = product.productId,
+                    quantity = quantity,
+                    unitPrice = product.price
+
+                };
+
+                context.OrderItems.Add(orderItem);
+                order.totalAmount += product.price * quantity;
+                product.stockQuantity -= quantity; // update stock
+
 
             }
+            context.SaveChanges();
+
+            Console.WriteLine("Order placed successfully.");
+            Console.WriteLine(order.orderId);
+
+
+
 
         }
 
