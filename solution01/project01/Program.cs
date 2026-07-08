@@ -452,13 +452,67 @@ namespace project01
 
             foreach (Product p in products)
             {
-                Console.WriteLine($"Products Name{p.productName}" +
-                    $"Price{p.price}" +
-                    $"Stock quantity {p.stockQuantity}" +
-                    $" availability status{p.isAvailable}");
+                Console.WriteLine($"Products Name{p.productName} \n" +
+                    $"Price{p.price} \n" +
+                    $"Stock quantity {p.stockQuantity} \n" +
+                    $" availability status{p.isAvailable}\n ");
             }
 
         }
+
+
+        // ==================================================================
+        //        *** 09  Filter Products by Category and Price Range ***
+        // ==================================================================
+
+        public static void FilterProducts()
+        {
+            Console.WriteLine("Enter Category ID: ");
+            int idCategory = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter minium price: ");
+            decimal min = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter maximum price: ");
+            decimal max = decimal.Parse(Console.ReadLine());
+
+            List<Product> products = context.Products
+                .Where(p => p.categoryId == idCategory
+                        && p.price >= min
+                        && p.price <= max)
+                .OrderBy(p=> p.price)
+                .ToList();
+
+            foreach(var product in products)
+            {
+                Console.WriteLine($"Name: {product.productName}\n" +
+                    $"Price: {product.price}\n" +
+                    $"Stock Quantity: {product.stockQuantity}\n" +
+                    $"isAvailable: {product.isAvailable}\n");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         static void Main(string[] args) 
         {
