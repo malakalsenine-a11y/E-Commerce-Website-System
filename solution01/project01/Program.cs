@@ -439,7 +439,27 @@ namespace project01
             context.SaveChanges();
             Console.WriteLine("Review deleted successfully.");
         }
-        
+
+        // ==================================================================
+        //                  *** 08 View All Products (Get All) ***
+        // ==================================================================
+
+        public static void ViewAllProducts()
+        {
+            List<Product> products = context.Products.ToList();
+
+            Console.WriteLine("=== All Products ===");
+
+            foreach (Product p in products)
+            {
+                Console.WriteLine($"Products Name{p.productName}" +
+                    $"Price{p.price}" +
+                    $"Stock quantity {p.stockQuantity}" +
+                    $" availability status{p.isAvailable}");
+            }
+
+        }
+
         static void Main(string[] args) 
         {
             Console.WriteLine("Hello, World!");
