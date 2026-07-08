@@ -1,4 +1,5 @@
 ﻿using project01.Models;
+using System.Transactions;
 
 namespace project01
 {
@@ -319,7 +320,7 @@ namespace project01
 
 
         // ==================================================================
-        //                  *** 04 Write a Product Review ***
+        //                  *** 05 Update Product Price and Availability ***
         // ==================================================================
 
         public static void UpdateProduct()
@@ -362,6 +363,58 @@ namespace project01
 
         }
 
+
+
+        // ==================================================================
+        //                  *** 06 Cancel an Order ***
+        // ==================================================================
+
+        public static void CancelOrder()
+        {
+            Console.WriteLine("Enter order ID: ");
+            int idOrder = int.Parse(Console.ReadLine());
+
+
+            Order order = context.Orders
+                .FirstOrDefault(o => o.orderId == idOrder);
+
+            if(order == null)
+            {
+                Console.WriteLine("Order not found.");
+                return;
+            }
+
+
+
+            var orderItems = context.OrderItems
+                .Where(O => O.orderId == idOrder)
+                .ToList();
+
+            foreach(var orderItem in orderItems)
+            {
+                Product product = context.Products
+                    .FirstOrDefault(P => P.productId == orderItem.productId);
+
+                if(product != null)
+                {
+                    product.stockQuantity += orderItem.quantity;
+
+                }
+
+            }
+
+            order.status = "Cancelled";
+            context.SaveChanges();
+            Console.WriteLine("Order cancelled successfully.");
+
+
+
+
+
+
+
+
+        }
 
         static void Main(string[] args) 
         {
