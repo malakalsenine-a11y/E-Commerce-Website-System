@@ -52,6 +52,35 @@ namespace project01
         }
 
         // ==================================================================
+        //                  ***  Add Category ***
+        // ==================================================================
+
+        public static void AddCategory()
+        {
+            Console.Write("Enter Category Name: ");
+            string categoryName = Console.ReadLine();
+
+            Console.Write("Enter Description: ");
+            string description = Console.ReadLine();
+
+            Console.Write("Enter Image URL: ");
+            string imageUrl = Console.ReadLine();
+
+
+            Category category = new Category
+            {
+                categoryName = categoryName,
+                description = description,
+                imageUrl = imageUrl
+            };
+
+            context.Categories.Add(category);
+            context.SaveChanges();
+
+            Console.WriteLine("Category added successfully.");
+        }
+
+        // ==================================================================
         //                  *** 02 Add a New Product to a Category ***
         // ==================================================================
 
@@ -66,9 +95,17 @@ namespace project01
             }
 
 
-            Console.WriteLine("Enter Id of Category: ");
+            Console.Write("Enter Category ID: ");
             int categoryID = int.Parse(Console.ReadLine());
 
+            Category selectedCategory = context.Categories
+               .FirstOrDefault(c => c.categoryId == categoryID);
+
+            if (selectedCategory == null)
+            {
+                Console.WriteLine("Category not found.");
+                return;
+            }
 
 
             Console.Write(" Enter productName: ");
@@ -154,19 +191,6 @@ namespace project01
                     Console.WriteLine("Invalid choice.");
                     return;
             }
-
-            //Console.WriteLine("Enter Payment Method:");
-            //string paymentMethod = Console.ReadLine();
-
-            //if (    paymentMethod != "CreditCard" &&
-            //        paymentMethod != "DebitCard" &&
-            //        paymentMethod != "PayPal" &&
-            //        paymentMethod != "Cash")
-            //    {
-            //        Console.WriteLine("Invalid payment method.");
-            //        return;
-            //    }
-
 
 
             Order order = new Order
@@ -365,7 +389,6 @@ namespace project01
         }
 
 
-
         // ==================================================================
         //                  *** 06 Cancel an Order ***
         // ==================================================================
@@ -557,15 +580,63 @@ namespace project01
 
 
 
-
-
-
-
-
-
         static void Main(string[] args) 
         {
-            Console.WriteLine("Hello, World!");
+            bool exit = false;
+            while (exit == false)
+            {
+                Console.WriteLine("\n========================================");
+                Console.WriteLine("   Flight Management System");
+                Console.WriteLine("========================================");
+                Console.WriteLine(" 1  - Add Register New User");
+                Console.WriteLine(" 2  - Add Category");
+                Console.WriteLine(" 3  - Add New Product To Categor");
+                Console.WriteLine(" 4  - Add Place Order");
+                Console.WriteLine(" 5  - Write Review");
+                Console.WriteLine(" 6  - Update Product");
+                Console.WriteLine(" 7  - Cancel Order");
+                Console.WriteLine(" 8  - Delete Review");
+                Console.WriteLine(" 9  - View All Products");
+                Console.WriteLine(" 10  - Filter Products");
+                Console.WriteLine(" 11  - Get Category With Products");
+                Console.WriteLine(" 12 - View Order History");
+                Console.WriteLine(" 13 - Product Summary Report");
+                Console.WriteLine(" 0  - Exit");
+                Console.WriteLine("========================================");
+                Console.Write("Select option: ");
+
+                int option = int.Parse(Console.ReadLine());
+
+                switch (option)
+                {
+                    case 1: AddRegisterNewUser(); break;
+                    case 2: AddCategory(); break;
+                    case 3: AddNewProductToCategory(); break;
+                    case 4: AddPlaceOrder(); break;
+                    case 5: WriteReview(); break;
+                    case 6: UpdateProduct(); break;
+                    case 7: CancelOrder(); break;
+                    case 8: DeleteReview(); break;
+                    case 9: ViewAllProducts(); break;
+                    case 10: FilterProducts(); break;
+                    case 11: GetCategoryWithProducts(); break;
+                    case 12: ViewOrderHistory(); break;
+                    case 13: ProductSummaryReport(); break;
+                    case 0: exit = true; break;
+                    default: Console.WriteLine("Invalid option. Please try again."); break;
+
+                }
+
+                if(!exit)
+                {
+                    Console.WriteLine("\nPress any key to continue ...");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+
+            Console.WriteLine("Goodbye!");
+
         }
     }
 }
