@@ -236,8 +236,86 @@ namespace project01
 
         }
 
+        // ==================================================================
+        //                  *** 04 Write a Product Review ***
+        // ==================================================================
+
+        public static void WriteReview()
+        {
+            var users = context.users.ToList();
+
+            foreach(var userx in users)
+            {
+                Console.WriteLine($"{userx.userId} , {userx.username}");
+            }
+
+            var products = context.Products.ToList();
+
+            foreach (var productx in products)
+            {
+                Console.WriteLine($"{productx.productId} , {productx.productName}");
+
+            }
+
+            Console.WriteLine("=== Available Users ===");
+
+            Console.WriteLine("Enter User ID: ");
+            int userid = int.Parse(Console.ReadLine());
+
+            User user = context.users
+                .FirstOrDefault(u => u.userId == userid);
 
 
+            if (user == null)
+            {
+                Console.WriteLine("User not found.");
+                return;
+            }
+
+
+            Console.WriteLine("=== Available Products ===");
+
+            Console.WriteLine("Enter product ID: ");
+            int idProduct = int.Parse(Console.ReadLine());
+
+            Product product = context.Products
+                .FirstOrDefault(p => p.productId == idProduct);
+
+
+            if(product == null)
+            {
+                Console.WriteLine("Product not found.");
+                return;
+            }
+
+
+            Console.WriteLine("Enter Rating (1 - 5): ");
+            int rating = int.Parse(Console.ReadLine());
+
+            if (rating < 1 || rating > 5)
+            {
+                Console.WriteLine("Rating must be between 1 and 5.");
+                return;
+            }
+
+
+            Console.WriteLine("Enter Comment: ");
+            string comment = Console.ReadLine();
+
+           
+
+            Review review = new Review
+            {
+                userId = userid,
+                productId = idProduct,
+                rating = rating,
+                comment = comment,
+                reviewDate = DateTime.Now
+            };
+            context.Reviews.Add(review);
+            context.SaveChanges();
+            Console.WriteLine("Review added successfully.");
+        }
 
 
 
