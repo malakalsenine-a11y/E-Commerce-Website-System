@@ -1,4 +1,5 @@
-﻿using project01.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using project01.Models;
 using System.Transactions;
 
 namespace project01
@@ -493,14 +494,62 @@ namespace project01
         }
 
 
+        // ==================================================================
+        //      *** 10 Get Category with All Its Products (Include) ***
+        // ==================================================================
+
+        public static void GetCategoryWithProducts()
+        {
+
+            Console.WriteLine("Enter category ID: ");
+            int id = int.Parse(Console.ReadLine());
+
+
+            Category category = context.Categories
+                .Include(c => c.products)
+                .FirstOrDefault(c => c.categoryId == id);
+
+            if(category == null)
+            {
+                Console.WriteLine("Category not found.");
+                return;
+            }
+
+            Console.WriteLine($"Name: {category.categoryName} ");
+            Console.WriteLine($"Description: {category.description}");
 
 
 
+            Console.WriteLine("=== Products ===");
 
 
+            foreach (var product in category.products)
+            {
+                Console.WriteLine(
+                    $"Product Name: {product.productName} \n" +
+                    $"Price: {product.price} \n");
+            }
 
 
+        }
 
+        // ==================================================================
+        //      *** 11  View Order History with Full Details (ThenInclude) ***
+        // ==================================================================
+
+        public static void ViewOrderHistory()
+        {
+
+        }
+
+        // ==================================================================
+        //      *** 12 Product Summary Report (Projection + Lazy Loading) ***
+        // ==================================================================
+
+        public static void ProductSummaryReport()
+        {
+
+        }
 
 
 
